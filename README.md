@@ -31,9 +31,11 @@ Don't worry about the warnings.\
 It should also display 2 plots, which should be perfect replicas of ` Figures/Initial_cluster.png ` and ` Figures/Relaxed_cluster.png `.
 
 If you prefer to run Julia from the terminal rather than the REPL, you might get 2 blank windows instead of 2 plots.\
-This is a registered bug in PlotlyJS v0.14.1, you have to upload to version v0.18.8 or higher:
+This is a registered bug in PlotlyJS v0.14.1, you have to upgrade to version v0.18.8 or higher:
 
 > ` Pkg.update("PlotlyJS") `
+
+Please note that from terminal, the plots might take some time to appear, even after the window pops up.
 
 ## First steps
 
@@ -44,3 +46,7 @@ Please read through it to get started.
 
 The more advanced reader might feel the need to play with lower-level functions. Please do so, they are all in the ` Code/ ` folder.\
 I tried to document these within the code itself. But should my comments be unsufficient, please send me an e-mail at ` nathan.magnan@maths.cam.ac.uk ` to request clarifications.
+
+## Usage in research
+
+If you've use it for research, please cite the paper **To Be Completed once it is published**.
