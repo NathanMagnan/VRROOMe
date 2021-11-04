@@ -2,17 +2,13 @@ using Interpolations
 using HDF5
 using StaticArrays
 
-
 try
-    global const DIRECTORY_SL = "C:/Users/Nathan/Documents/F - Stage à Paris/data_sl/" # Directory in which the sl are stored - my computer
+    global const DIRECTORY_SL = dirname(dirname(@__FILE__)) * "\\Data\\" # Directory in which the sl are stored
     namefile = DIRECTORY_SL * "data_sl_l_" * string(2) * ".hf5"
     file = h5open(namefile,"r")
     close(file)
 catch
-    global const DIRECTORY_SL = "/home/magnan/SVN/tex_VRR_Disc/data_sl/" # Directory in which the sl are stored - infinity
-    namefile = DIRECTORY_SL * "data_sl_l_" * string(2) * ".hf5"
-    file = h5open(namefile,"r")
-    close(file)
+    println("File Coupling_coefficients_interpolated - ERROR - could not load the sl coefficients from the file")
 end
 
 const ALPHA_MIN = 10^(-3) # Minimum value of α over which we interpolated the sₗ
