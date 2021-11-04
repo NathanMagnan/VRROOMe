@@ -10,6 +10,7 @@ To invoke Julia in the terminal, you'll need to make sure that the Julia command
 You'll also need to install the following Julia packages:
 - Distributions
 - Plots
+- PlotlyJS
 - Interpolations
 - HDF5
 - StaticArrays
@@ -20,11 +21,19 @@ You'll also need to install the following Julia packages:
 **WARNING: Do NOT interupt the installation of the packages!**
 
 Once all of this is done, you can test if everything is ready by running the file ` Code/Example.jl ` in the REPL.\
-After a minute, it should produce one line of warning, don't worry about it:
+After a few minutes, it should produce:
 
-> ` WARNING: using Distributions.scale in module Main conflicts with an existing identifier. `
+> ` WARNING: using Distributions.scale in module Main conflicts with an existing identifier. `\
+> ` WARNING: redefinition of constant TAB_INT_SL. This may fail, cause incorrect answers, or produce other errors. `\
+> ` true `
 
+Don't worry about the warnings.\
 It should also display 2 plots, which should be perfect replicas of ` Figures/Initial_cluster.png ` and ` Figures/Relaxed_cluster.png `.
+
+If you prefer to run Julia from the terminal rather than the REPL, you might get 2 blank windows instead of 2 plots.\
+This is a registered bug in PlotlyJS v0.14.1, you have to upload to version v0.18.8 or higher:
+
+> ` Pkg.update("PlotlyJS") `
 
 ## First steps
 

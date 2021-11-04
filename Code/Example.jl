@@ -87,3 +87,5 @@ my_plot_2 = plot_that_dist("m", # "m" means that we want to plot the segregation
                         Bins_e, n_pop_e)
 
 display(my_plot_2)
+
+readline()
