@@ -49,4 +49,4 @@ I tried to document these within the code itself. But should my comments be unsu
 
 ## Usage in research
 
-If you've use it for research, please cite the paper **To Be Completed once it is published**.
+If you've use VROOMe for research, please cite the paper **To Be Completed once it is published**.
