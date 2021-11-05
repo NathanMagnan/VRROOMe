@@ -3,7 +3,7 @@ using HDF5
 using StaticArrays
 
 try
-    global const DIRECTORY_SL = dirname(dirname(@__FILE__)) * "\\Data\\" # Directory in which the sl are stored
+    global const DIRECTORY_SL = dirname(dirname(@__FILE__)) * "/Data/" # Directory in which the sl are stored
     namefile = DIRECTORY_SL * "data_sl_l_" * string(2) * ".hf5"
     file = h5open(namefile,"r")
     close(file)
