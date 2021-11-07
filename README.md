@@ -32,7 +32,7 @@ It should also display 2 plots, which should be perfect replicas of ` Figures/In
 
 ` Figures/Initial_cluster.png ` | ` Figures/Relaxed_cluster.png `
 - | -
-![Alt text](Figures/Initial_cluster.png) | ![Alt text](Figures/Relaxed_cluster.png)
+<img src="Figures/Initial_cluster.png" alt="drawing" width="400"/> | <img src="Figures/Relaxed_cluster.png" alt="drawing" width="400"/>
 
 If you prefer to run Julia from the terminal rather than the REPL, you might get 2 blank windows instead of 2 plots.\
 This is a registered bug in PlotlyJS v0.14.1, you have to upgrade to version v0.18.8 or higher:
