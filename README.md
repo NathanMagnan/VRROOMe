@@ -55,4 +55,4 @@ I tried to document these within the code itself. But should my comments be unsu
 
 ## Usage in research
 
-If you've use VROOMe for research, please cite the paper **To Be Completed once it is published**.
+Should you use VROOMe for research, we invite you to cite the paper **To Be Completed once it is published**.
