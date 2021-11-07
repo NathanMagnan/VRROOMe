@@ -20,6 +20,8 @@ You'll also need to install the following Julia packages:
 
 **WARNING: Do NOT interupt the installation of the packages!**
 
+## Testing the installation with the example script
+
 Once all of this is done, you can test if everything is ready by running the file ` Code/Example.jl ` in the REPL.\
 After a few minutes, it should produce:
 
