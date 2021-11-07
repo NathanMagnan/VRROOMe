@@ -1,8 +1,14 @@
+println("Starting -- Julia seems to be working.")
+println("")
+
 using Random
 Random.seed!(1)
 
 
-### First let's create an initial cluster
+
+###############################################################
+println("Let's first create an initial cluster, with 16 star formation events")
+
 include("./Cluster.jl")
 
 lmax = 10
@@ -29,11 +35,17 @@ clust = Cluster_initial(n_disks, n_stars_per_disk, lmax,
                         a_min = a_min, a_max = a_max, γₐ = γₐ,
                         e_min = e_min, e_max = e_max, γₑ = γₑ)
 
-# Then we can compute the (normalized) binding energy and spin of this cluster
-Etot_norm, s = get_ES_from_clust(clust) # Here, Etot_norm = Etot / (J N^2) = -E_binding
+println("We can compute this cluster's binding energy E and spin s")
+Etot_norm, s = get_ES_from_clust(clust) # Here, Etot_norm = Etot / (J N^2) = -E
                                         # J = G mₘᵢₙ² / aₘᵢₙ
 
-# We can also plot it, it should reproduce the figure "Initial_cluster.png"
+
+
+###############################################################
+println("The cluster has been created and its (E, s) computed")
+println("Now let's plot it")
+# It should reproduce the figure "Initial_cluster.png"
+
 using Plots
 
 my_plot_1 = plot_that_cluster(clust)
@@ -42,7 +54,10 @@ display(my_plot_1)
 
 
 
-### Now let's create a distribution function that will mimick this cluster
+###############################################################
+println("")
+println("Now let's create the initial DF related to this initial cluster")
+# This means we create all the Kₖ = (m, a, e), Nₖ, Lₖ and Jₗ[K, K'], and we translate (E, s) from the initial cluster into (Eₜₒₜ, Lₜₒₜ)
 
 # First we create the m, a, e bins, and fill them with stars i.e. create the N(K) vector
 include("./Miscellaneous.jl")
@@ -68,7 +83,12 @@ Etot, Ltot = get_EL_for_dist(Etot_norm, s,
 
 
 
-### Now let's optimize this distribution's entropy, which is equivalent to relaxing the cluster
+###############################################################
+println("The initial DF realted to the initial cluster has been created")
+println("")
+println("Let's modify this DF so that it maximizes the entropy S")
+# This means we relax the cluster
+
 include("./Solve_by_energy_sequence.jl")
 using LinearAlgebra
 
@@ -77,7 +97,11 @@ println( norm(dist.cost) < 10^(-6) ) # This is to check that the optimization me
 
 
 
-### Finally, we can plot this distribution's segregation in mass, it reproduce the figure "Relaxed_cluster.png"
+###############################################################
+println("The entropy has been maximized")
+println("Finally, let's plot the final DF")
+# It should reproduce the figure "Relaxed_cluster.png"
+
 my_plot_2 = plot_that_dist("m", # "m" means that we want to plot the segregation in mass. 
                                 # "a" or "e" would give the segregations in semi-major axis and eccentricity
                         Etot_norm, s, lmax,
@@ -88,4 +112,4 @@ my_plot_2 = plot_that_dist("m", # "m" means that we want to plot the segregation
 
 display(my_plot_2)
 
-readline()
+readline() # This is just so that the figure panels remain open

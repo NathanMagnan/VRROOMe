@@ -25,9 +25,22 @@ You'll also need to install the following Julia packages:
 Once all of this is done, you can test if everything is ready by running the file ` Code/Example.jl ` in the REPL.\
 After a few minutes, it should produce:
 
+> ` Starting -- Julia seems to be working. `\
+> \
+> ` Let's first create an initial cluster, with 16 star formation events `\
 > ` WARNING: using Distributions.scale in module Main conflicts with an existing identifier. `\
+> ` We can compute this cluster's binding energy E and spin s `\
+> ` The cluster has been created and its (E, s) computed `\
+> ` Now let's plot it `\
+> \
+> ` Now let's create the initial DF related to this initial cluster `\
 > ` WARNING: redefinition of constant TAB_INT_SL. This may fail, cause incorrect answers, or produce other errors. `\
-> ` true `
+> ` The initial DF related to the initial cluster has been created `\
+> \
+> ` Let's modify this DF so that it maximizes the entropy S `\
+> ` true `\
+> ` The entropy has been maximized `\
+> ` Finally, let's plot the final DF `
 
 Don't worry about the warnings.\
 It should also display 2 plots, which should be perfect replicas of ` Figures/Initial_cluster.png ` and ` Figures/Relaxed_cluster.png `:
