@@ -31,6 +31,7 @@ Don't worry about the warnings.\
 It should also display 2 plots, which should be perfect replicas of ` Figures/Initial_cluster.png ` and ` Figures/Relaxed_cluster.png `:
 
 ` Figures/Initial_cluster.png ` | ` Figures/Relaxed_cluster.png `
+- | - 
 <img src="Figures/Initial_cluster.png" alt="drawing" width="350"/> | <img src="Figures/Relaxed_cluster.png" alt="drawing" width="350"/>
 
 If you prefer to run Julia from the terminal rather than the REPL, you might get 2 blank windows instead of 2 plots.\
