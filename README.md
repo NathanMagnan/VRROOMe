@@ -18,11 +18,19 @@ You'll also need to install the following Julia packages:
 - Random
 - LinearAlgebra
 
-**WARNING: Do NOT interupt the installation of the packages!**
+**WARNING: Do NOT interrupt the installation of the packages!**
 
 ## Testing the installation with the example script
 
-Once all of this is done, you can test if everything is ready by running the file ` Code/Example.jl ` in the REPL.\
+Once all of this is done, you can test if everything is ready by running the file ` Code/Example.jl ` ideally from your IDE of choice (Atom, VS Code, ...), or in the REPL
+
+> ` >>> julia `\
+> ` julia> include("Code/Example.jl") `
+
+or in the terminal
+
+> ` >>>  julia Code.Example.jl `
+
 After a few minutes, it should produce:
 
 > ` Starting -- Julia seems to be working. `\
@@ -49,16 +57,9 @@ It should also display 2 plots, which should be perfect replicas of ` Figures/In
 -|- 
 <img src="Figures/Initial_cluster.png" alt="drawing" width="400"/> | <img src="Figures/Relaxed_cluster.png" alt="drawing" width="400"/>
 
-If you prefer to run Julia from the terminal rather than the REPL, you might get 2 blank windows instead of 2 plots.\
-This is a registered bug in PlotlyJS v0.14.1, you have to upgrade to version v0.18.8 or higher:
-
-> ` Pkg.update("PlotlyJS") `
-
-Please note that from terminal, the plots might take some time to appear, even after the window pops up.
-
 ## First steps
 
-The ` Code/Example.jl ` has been designed to provide examples of the commands I find the most usefull.\
+The ` Code/Example.jl ` has been designed to provide examples of the commands I find the most useful.\
 Please read through it to get started.
 
 ## Advanced usage
